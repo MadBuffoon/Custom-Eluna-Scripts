@@ -8,6 +8,7 @@ Notes: Opens the a menu for other menus from a item.
 local enabled = true
 local Binding_Menu = true
 local Party_Summon_Menu = true
+local DungeonStatsReward_Check = true
 local Other = true
 
 -- Do not change or remove
@@ -19,7 +20,8 @@ local Settings = {
 		["Main"] ={
 			--{VariableName, TrueFalse, Value, Text},
 			{"Binding_Menu", "MenuMenus", 0, 0},
-			{"Party_Summon_Menu", "MenuMenus", 0, 0}
+			{"Party_Summon_Menu", "MenuMenus", 0, 0},
+			{"DungeonStatsReward_Check", "MenuMenus", 0, 0}
 		}
 }
 
@@ -86,6 +88,9 @@ function MenuMenusGossip(event, player)
 	if Party_Summon_Menu then
 	player:GossipMenuAddItem(3, "|TInterface\\Icons\\Spell_shadow_demoniccirclesummon:34|t Summon Menu", 0, 20)
 	end
+	if DungeonStatsReward_Check then
+	player:GossipMenuAddItem(3, "|TInterface\\Icons\\Inv_misc_grouplooking:34|t Dungeon Stats Check", 0, 30)
+	end
 	if Other then
 	player:GossipMenuAddItem(3, "|TInterface\\Icons\\Mail_gmicon:34|t Other", 0, 90)
 	end
@@ -115,6 +120,9 @@ local PlayerName = player:GetName()
 	if(intid == 20) then --Summon Menu
 		PartyTPMenuGossip(event, player)
 	end	
+	if(intid == 30) then --Dungeon Stats Check
+		DRStatsGossip(event, player)
+	end		
 	if(intid == 90) then --Other Menu
 		OtherMenuGossip(event, player)
 	end		
