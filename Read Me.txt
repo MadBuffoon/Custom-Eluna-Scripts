@@ -1,0 +1,13 @@
+
+
+Just move madbuffoon folder in to the folder named `lua_scripts` or where ever you have your eluna scripts.
+
+Run both SQLs "MadBuffoon_Update.sql and MadBuffoon_TrinityCorePersonalTeleporter.sql"
+
+Run the world server once up do a restart and everything should be working.
+
+
+
+Note:
+	If you have used a previous version (Before Version 1.1.0)of my binding menu you might need to delete the data table.
+	What to delete in the world db binding_teleport
