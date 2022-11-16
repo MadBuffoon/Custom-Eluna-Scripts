@@ -15,7 +15,6 @@ local WhatColumn
 local ListOfLua = {
 	{"|TInterface\\Icons\\Ability_spy:34|t ", "Binding_Menu", 10},
 	{"|TInterface\\Icons\\Spell_shadow_demoniccirclesummon:34|t ", "Party_Summon_Menu", 11},
-	{"|TInterface\\Icons\\Inv_misc_grouplooking:34|t ", "DungeonStatsReward_Check", 12},
 	{"|TInterface\\Icons\\achievement_boss_mutanus_the_devourer:34|t ", "ReCustomize_Character", 13}
 }
 local function setLocal(name, val)
